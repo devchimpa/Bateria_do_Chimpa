@@ -1,10 +1,14 @@
 #!/bin/bash
+#
 # Script para trazer status da bateria do notebook.
+#
+#O Objetivo deste script é poder usar o notebook no modo CLI
+#sem perder a visualização da bateria.
 #
 #Desenvolvido por DevChimpa Dia: 05/01/2023
 #E-mail para contato: chimpadeveloper@gmail.com
 #
-
+#
 BATERIA=$(cat /sys/class/power_supply/BAT0/uevent | grep POWER_SUPPLY_CAPACITY= | cut -c 23-25)
 STATUS_BATERIA=$(cat /sys/class/power_supply/BAT0/uevent | grep POWER_SUPPLY_STATUS | tr = ' ' | cut -d' ' -f2)
 
