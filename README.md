@@ -1,3 +1,5 @@
+#Coletânea de Scripts para monitoria do meu sistema.
+
 # bateria.sh
 Este script serve para mostrar a porcentagem de bateria e status por modo de texto.
 O script foi feito em Shell e criada uma alias chamada "bateria" para executar sempre que for chamada.
