@@ -1,0 +1,73 @@
+#!/bin/bash
+#
+#Desenvolvido por: DevChimpa
+#Data:
+#Contato:       https://www.linkedin.com/in/rodrigo-pinheiro-214663206/
+#               https://github.com/devchimpa/
+#
+#######################################################################
+#
+#######################DESCRIÇÃO DO PROGRAMA###########################
+#
+# Programinha para animar antes de iniciar a interface gráfica.
+#
+
+########################################################################
+
+###########################################################################
+                        #FUNÇÕES MACACO#
+###########################################################################
+
+PORTA="2520ebccf970a3c105432e1407574f0c"
+
+desenha_macaco(){
+clear
+echo "############################################################"
+echo "           --------------------------------------"
+echo "           $1                                 "
+echo "         /--------------------------------------"
+echo "        /
+     /~\
+   C(o o)D   -----
+    _(^)   /    /
+   /__m~\m/____/ "
+echo "############################################################"
+}
+
+desenha_macaco2(){
+clear
+echo "############################################################"
+echo "           --------------------------------------"
+echo "          $1                                "
+echo "         /--------------------------------------"
+echo "        /
+     /~\
+    C oo)   -----
+    _( ^)  /    /
+   /__m~\m/____/ "
+echo "###########################################################"
+}
+
+
+desenha_macaco "Quer iniciar o sistema?..."
+sleep 1
+desenha_macaco2 "Digite sua senha..."
+read -s SENHA
+CHAVE="$( echo "$SENHA" | md5sum | awk '{print $1}')"
+
+        #echo "$SENHA"
+        #echo "$CHAVE"
+        sleep 2
+
+                if [ "$CHAVE" = "$PORTA" ]
+                then
+                desenha_macaco " Bora nessa..."
+                sleep 1
+                desenha_macaco2 "Iniciando o sistema"
+                sleep 1
+                startx
+
+        else
+                desenha_macaco "A senha não é essa: "$SENHA" "
+
+        fi
