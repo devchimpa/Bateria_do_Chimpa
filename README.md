@@ -1,4 +1,4 @@
-#Coletânea de Scripts para monitoria do meu sistema.
+#Coletânea de Scripts para monitoria e uso do meu sistema.
 
 # bateria.sh
 Este script serve para mostrar a porcentagem de bateria e status por modo de texto.
